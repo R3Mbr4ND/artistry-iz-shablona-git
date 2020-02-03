@@ -27,15 +27,6 @@ a:hover {
   opacity: 1;
 }
 
-a.btn {
-  color: #fff;
-  border-radius: 4px;
-  text-transform: uppercase;
-  background-color: #ffffff;
-  font-weight: 800;
-  text-align: center;
-}
-
 section {
   display: flex;
   flex-direction: column;
@@ -55,7 +46,7 @@ section {
   }
 }
 
-section h2.title {
+.info-text {
   color: #000000;
   text-transform: capitalize;
   font: bold 32px 'Open Sans', sans-serif;
@@ -63,15 +54,14 @@ section h2.title {
   text-align: center;
 }
 
-section p {
-  max-width: 800px;
-  text-align: center;
-  margin-bottom: 35px;
-  padding: 0 20px;
-  line-height: 2;
+.grid-info {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-ul.grid {
+.grid-products {
   width: 50%;
   display: flex;
   flex-wrap: wrap;
@@ -135,9 +125,9 @@ header nav li:last-child {
 }
 
 /*----------------
- 	Hero Section
+ 	Main Section
 ----------------*/
-.hero {
+.main {
   position: relative;
   justify-content: center;
   min-height: 100vh;
@@ -146,7 +136,7 @@ header nav li:last-child {
   box-shadow: inset 0 0 10px;
 }
 
-.hero .background-image {
+.background-image-main {
   position: absolute;
   top: 0;
   left: 0;
@@ -155,105 +145,95 @@ header nav li:last-child {
   background-size: cover;
   background-color: #ffffff;
   z-index: -1;
+  background-image: url(../img/amway3.jpeg);
 }
 
-.hero .background-image:after {
-  content: '';
+.main h1 {
+  font: bold 50px 'Open Sans', sans-serif;
+  align-text: center;
+  text-shadow: grey 2px 3px 4px;
+}
+
+@media (max-width: 800px) {
+  .main {
+    min-height: 600px;
+  }
+
+  .main h1 {
+    font-size: 48px;
+  }
+
+  .main h2 {
+    font-size: 24px;
+  }
+}
+
+/*----------------------
+ 	info Section
+----------------------*/
+.info {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  box-shadow: inset 0 0 10px;
+}
+
+.background-image-info {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #414a4f;
-  opacity: 0.15;
-}
-
-.hero h1 {
-  font: bold 50px 'Open Sans', sans-serif;
-  margin-bottom: 450px;
-  text-shadow: grey 2px 3px 4px;
-}
-
-.hero a.btn {
-  padding: 20px 46px;
-}
-
-@media (max-width: 800px) {
-  .hero {
-    min-height: 600px;
-  }
-
-  .hero h1 {
-    font-size: 48px;
-  }
-
-  .hero h2 {
-    font-size: 24px;
-  }
-
-  .hero a.btn {
-    padding: 15px 40px;
-  }
-}
-
-/*----------------------
- 	Features Section
-----------------------*/
-.features {
-  display: flex;
+  background-size: cover;
+  z-index: -1;
   background-color: #f7f7f7;
-  box-shadow: inset 0 0 10px;
+  background-image: url(../img/amway13.jpg);
+  background-repeat: no-repeat;
 }
 
-.features li {
-  display: flex;
-  flex-direction: row;
-  padding: 0 30px;
-  flex-basis: 33%;
+.info li {
+  
 }
 
-.features li p {
-  margin-top: 5px;
+.info-text {
+  margin-left: 400px;
+  margin-top: 20px;
   font-size: 25px;
   text-shadow: grey 1px 2px 3px;
-  text-align: center;
+ 
 }
 
-.features a {
+.info a {
   color: #0175fc;
 }
 
 .foto {
-  display: flex;
-  flex-direction: row;
-  align-items: right;
-  text-align: right;
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   border-radius: 100px;
 }
 @media (max-width: 1000px) {
-  .features .grid li {
+  .grid-info li {
     flex-basis: 70%;
     margin-bottom: 65px;
   }
 
-  .features li:last-child {
+  .info li:last-child {
     margin-bottom: 0;
   }
 }
 
 @media (max-width: 600px) {
-  .features .grid li {
+  .grid-info li {
     flex-basis: 100%;
   }
 }
 
 /*--------------------
- 	Our Work Section
+ 	products Section
 ---------------------*/
-.оur-work {
-  background-color: #b0b0b0;
+.products {
+  position: relative;
   box-shadow: inset 0 0 50px;
   display: flex;
   flex-direction: column;
@@ -261,24 +241,36 @@ header nav li:last-child {
   text-align: center;
   padding: 60px 0;
 }
+.background-image-products {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-image: url(../img/hren3.jpg);
+}
 
-.our-work p {
+.products p {
   font-size: 25px;
   text-shadow: grey 1px 2px 3px;
   text-align: center;
 }
 
-.our-work ul {
+.products ul {
   display: flex;
   margin-bottom: 25px;
   font-size: 32px;
 }
 
-.our-work ul li {
+.products ul li {
   margin: 0 8px;
+  overflow: hidden;
 }
 
-.our-work ul li {
+.products ul li {
   display: flex;
   flex-direction: column;
   align-items: right;
@@ -286,14 +278,14 @@ header nav li:last-child {
   margin: 0 8px;
 }
 
-.our-work ul li:first-child {
+.products ul li:first-child {
   margin-left: 0;
 }
 
-.our-work ul li:last-child {
+.products ul li:last-child {
   margin-right: 0;
 }
-.our-work .grid li {
+.grid-products li {
   padding: 20px;
   width: 100px;
   height: 200px;
@@ -304,13 +296,13 @@ header nav li:last-child {
   background-color: #333;
 }
 
-.our-work .grid .small {
-  flex-basis: 40%;
+.grid-products .small {
+  flex-basis: 100%;
 }
 
 @media (max-width: 1000px) {
 
-  .our-work .grid .small, {
+.grid-products .small, {
     flex-basis: 100%;
   }
 }
