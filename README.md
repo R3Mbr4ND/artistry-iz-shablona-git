@@ -1,1 +1,1 @@
-# artistry-iz-shablona-git
+# amway-ot-S
