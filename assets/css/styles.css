@@ -10,7 +10,9 @@
 html {
   font: normal 16px sans-serif;
   color: #000000;
+  scroll-behavior: smooth;
 }
+
 
 ul, nav {
   list-style: none;
@@ -44,14 +46,6 @@ section {
   section {
     padding: 80px 30px;
   }
-}
-
-.info-text {
-  color: #000000;
-  text-transform: capitalize;
-  font: bold 32px 'Open Sans', sans-serif;
-  margin-bottom: 35px;
-  text-align: center;
 }
 
 .grid-info {
@@ -145,12 +139,24 @@ header nav li:last-child {
   background-size: cover;
   background-color: #ffffff;
   z-index: -1;
-  background-image: url(../img/amway3.jpeg);
+  background-image: url(../img/amway4.jpeg);
+  background-repeat: no-repeat;
 }
 
+.logo-main {
+  background-image: url(../img/logo-main.png);
+  z-index: 1;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  width: 200px;
+  height: 70px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 .main h1 {
   font: bold 50px 'Open Sans', sans-serif;
-  align-text: center;
+  text-align: center;
   text-shadow: grey 2px 3px 4px;
 }
 
@@ -192,16 +198,18 @@ header nav li:last-child {
 }
 
 .info li {
-  
+
 }
 
 .info-text {
   margin-left: 400px;
   margin-top: 20px;
-  font-size: 25px;
   text-shadow: grey 1px 2px 3px;
- 
-}
+  color: #000000;
+  font: 25px 'Open Sans', sans-serif;
+  margin-bottom: 35px;
+  text-align: center;
+  }
 
 .info a {
   color: #0175fc;
@@ -233,67 +241,67 @@ header nav li:last-child {
  	products Section
 ---------------------*/
 .products {
-  position: relative;
-  box-shadow: inset 0 0 50px;
+  box-shadow: inset 0 0 30px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 60px 0;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: space-around;
 }
-.background-image-products {
+
+/*.background-image-products {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: auto;
   z-index: -1;
   background-repeat: no-repeat;
   background-image: url(../img/hren3.jpg);
-}
+}*/
 
 .products p {
-  font-size: 25px;
+  font: 25px 'Open Sans', sans-serif;
+  line-height: 1.8;
   text-shadow: grey 1px 2px 3px;
   text-align: center;
+  padding: 20px 200px;
 }
 
-.products ul {
-  display: flex;
-  margin-bottom: 25px;
-  font-size: 32px;
+.product1 {
+  background-image: url(../img/product1.jpg);
 }
 
-.products ul li {
-  margin: 0 8px;
-  overflow: hidden;
+.product2 {
+  background-image: url(../img/product2.jpg);
 }
 
-.products ul li {
-  display: flex;
-  flex-direction: column;
-  align-items: right;
-  text-align: right;
-  margin: 0 8px;
+.product3 {
+  background-image: url(../img/product3.jpg);
 }
 
-.products ul li:first-child {
-  margin-left: 0;
+.product4 {
+  background-image: url(../img/product4.jpg);
 }
 
-.products ul li:last-child {
-  margin-right: 0;
+.product5 {
+  background-image: url(../img/product5.jpg);
 }
+
 .grid-products li {
-  padding: 20px;
-  width: 100px;
-  height: 200px;
+  display: flex;
+  flex-direction: inherit;
+  flex-flow: inherit;
+  justify-content: inherit;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border: 3px solid black;
   border-radius: 50px;
-  background-clip: content-box;
-  background-size: cover;
-  background-position: center;
   background-color: #333;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 15px;
 }
 
 .grid-products .small {
@@ -313,41 +321,57 @@ header nav li:last-child {
 footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: #adadad;
-  background-color: #414a4f;
-  padding: 60px 0;
   box-shadow: inset 0 0 30px;
 }
 
 footer ul {
   display: flex;
-  margin-bottom: 25px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
   font-size: 32px;
+  z-index: 1;
 }
 
-footer img {
-  margin: 0 8px;
+footer ul li {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  z-index: -1;
 }
 
-footer ul li:first-child {
-  margin-left: 0;
-}
-
-footer ul li:last-child {
-  margin-right: 0;
+footer a {
+  z-index:1;
 }
 
 footer p {
+  color: black;
+  margin-top: 5px;
+  font: 25px 'Open Sans', sans-serif;
   text-transform: uppercase;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 10px;
+  text-shadow: grey 1px 2px 3px;
+  text-align: center;
+  padding: 5px 200px;
 }
 
 footer p a {
   color: #fff;
+}
+
+.background-image-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  background-image: url(../img/amway-footer2new3.png);
+  width: 180px;
+  height: 60px;
+  z-index: 1;
+  top: 280px;
+  left: 300px;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 @media (max-width: 700px) {
