@@ -1,6 +1,6 @@
-/*-------------
- 	General
--------------*/
+/*---------------------------------------------------
+ 	                     General
+---------------------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -36,18 +36,6 @@ section {
   padding: 125px 100px;
 }
 
-@media (max-width: 1000px) {
-  section {
-    padding: 100px 50px;
-  }
-}
-
-@media (max-width: 600px) {
-  section {
-    padding: 80px 30px;
-  }
-}
-
 .grid-info {
   width: 50%;
   display: flex;
@@ -62,9 +50,9 @@ section {
   justify-content: center;
 }
 
-/*-------------
- 	Header
--------------*/
+/*----------------------------------------------------
+ 	                     Header
+----------------------------------------------------*/
 header {
   position: absolute;
   top: 0;
@@ -102,26 +90,11 @@ header nav li:last-child {
   margin-right: 0;
 }
 
-@media (max-width: 1000px) {
-  header {
-    padding: 20px 50px;
-  }
-}
-
-@media (max-width: 700px) {
-  header {
-    flex-direction: column;
-  }
-
-  header h2 {
-    margin-bottom: 15px;
-  }
-}
-
-/*----------------
- 	Main Section
-----------------*/
+/*---------------------------------------------------
+                   	Main Section
+---------------------------------------------------*/
 .main {
+  display: flex;
   position: relative;
   justify-content: center;
   min-height: 100vh;
@@ -131,6 +104,7 @@ header nav li:last-child {
 }
 
 .background-image-main {
+  display: flex;
   position: absolute;
   top: 0;
   left: 0;
@@ -144,6 +118,7 @@ header nav li:last-child {
 }
 
 .logo-main {
+  display: flex;
   background-image: url(../img/logo-main.png);
   z-index: 1;
   position: absolute;
@@ -160,55 +135,34 @@ header nav li:last-child {
   text-shadow: grey 2px 3px 4px;
 }
 
-@media (max-width: 800px) {
-  .main {
-    min-height: 600px;
-  }
-
-  .main h1 {
-    font-size: 48px;
-  }
-
-  .main h2 {
-    font-size: 24px;
-  }
-}
-
-/*----------------------
- 	info Section
-----------------------*/
+/*---------------------------------------------------
+ 	                   Info Section
+---------------------------------------------------*/
 .info {
-  position: relative;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   box-shadow: inset 0 0 10px;
 }
 
 .background-image-info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
+  display: flex;
+  width: 2000px;
+  height: 500px;
+  background-size: 100%;
   z-index: -1;
-  background-color: #f7f7f7;
-  background-image: url(../img/amway13.jpg);
+  background-color: red;
+  background-image: url(../img/amway14.jpg);
   background-repeat: no-repeat;
 }
 
-.info li {
-
-}
-
 .info-text {
-  margin-left: 400px;
+  margin-left: 100px;
   margin-top: 20px;
   text-shadow: grey 1px 2px 3px;
   color: #000000;
   font: 25px 'Open Sans', sans-serif;
   margin-bottom: 35px;
-  text-align: center;
   }
 
 .info a {
@@ -216,30 +170,19 @@ header nav li:last-child {
 }
 
 .foto {
-  width: 190px;
-  height: 190px;
-  border-radius: 100px;
-}
-@media (max-width: 1000px) {
-  .grid-info li {
-    flex-basis: 70%;
-    margin-bottom: 65px;
-  }
-
-  .info li:last-child {
-    margin-bottom: 0;
-  }
+  display: flex;
+  background-image: url(../img/M.jpg);
+  width: 850px;
+  height: 250px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 150px;
+  background-color: red;
 }
 
-@media (max-width: 600px) {
-  .grid-info li {
-    flex-basis: 100%;
-  }
-}
-
-/*--------------------
- 	products Section
----------------------*/
+/*---------------------------------------------------
+ 	                 Products Section
+---------------------------------------------------*/
 .products {
   box-shadow: inset 0 0 30px;
   display: flex;
@@ -247,18 +190,6 @@ header nav li:last-child {
   flex-flow: wrap;
   justify-content: space-around;
 }
-
-/*.background-image-products {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: auto;
-  z-index: -1;
-  background-repeat: no-repeat;
-  background-image: url(../img/hren3.jpg);
-}*/
 
 .products p {
   font: 25px 'Open Sans', sans-serif;
@@ -269,22 +200,27 @@ header nav li:last-child {
 }
 
 .product1 {
+  display: flex;
   background-image: url(../img/product1.jpg);
 }
 
 .product2 {
+  display: flex;
   background-image: url(../img/product2.jpg);
 }
 
 .product3 {
+  display: flex;
   background-image: url(../img/product3.jpg);
 }
 
 .product4 {
+  display: flex;
   background-image: url(../img/product4.jpg);
 }
 
 .product5 {
+  display: flex;
   background-image: url(../img/product5.jpg);
 }
 
@@ -308,16 +244,9 @@ header nav li:last-child {
   flex-basis: 100%;
 }
 
-@media (max-width: 1000px) {
-
-.grid-products .small, {
-    flex-basis: 100%;
-  }
-}
-
-/*-------------
- 	Footer
--------------*/
+/*---------------------------------------------------
+ 	                     Footer
+---------------------------------------------------*/
 footer {
   display: flex;
   flex-direction: column;
@@ -334,8 +263,6 @@ footer ul {
 
 footer ul li {
   display: flex;
-  padding: 20px;
-  margin: 10px;
 }
 
 footer a {
@@ -343,6 +270,7 @@ footer a {
 }
 
 .svyaz {
+  display: flex;
   color: black;
   margin-top: 35px;
   font: 25px 'Open Sans', sans-serif;
@@ -356,17 +284,27 @@ footer p a {
   color: #fff;
 }
 
-.background-image-footer {
+.logo-footer {
   display: flex;
-  justify-content: flex-start;
-  align-items: left;
-  background-image: url(../img/amway-footer2new3.png);
-  width: 230px;
-  height: 85px;
+  background-image: url(../img/logo-main.png);
   z-index: 1;
-  margin-left: 150px;
-  background-repeat: no-repeat;
+  position: sticky;
+  top: 150px;
+  left: 150px;
+  width: 200px;
+  height: 70px;
   background-size: 100%;
+  background-repeat: no-repeat;
+  border: 2px solid blue;
+}
+
+.logo-footer-a {
+  border: 2px dotted blue;
+  z-index: 2;
+  top: 150px;
+  left: 180px;
+  width: 210px;
+  height: 80px;
 }
 
 .inst {
@@ -382,6 +320,12 @@ footer p a {
   background-repeat: no-repeat;
   background-size: 100%;
   padding: 5px;
+  border: 2px solid purple;
+}
+
+.inst-footer-a {
+  border: 2px dotted purple;
+  z-index: 2;
 }
 
 .whats {
@@ -396,10 +340,22 @@ footer p a {
   background-repeat: no-repeat;
   background-size: 100%;
   padding: 5px;
+  border: 2px solid green;
+}
+
+.whats-footer-a {
+  border: 2px dotted green;
+  z-index: 2;
 }
 
 .tel {
   margin-top: 20px;
+  border: 2px solid black;
+}
+
+.tel-footer-a {
+  border: 2px dotted black;
+  z-index: 2;
 }
 
 .footer-logo-text {
@@ -408,16 +364,4 @@ footer p a {
   font: 15px 'Open Sans', sans-serif;
   text-shadow: grey 1px 2px 3px;
   margin-bottom: 15px;
-}
-
-@media (max-width: 700px) {
-  footer {
-    padding: 80px 15px;
-  }
-
-/* -- Demo ads -- */
-@media (max-width: 1200px) {
-  #bsaHolder {
-    display: none;
-  }
 }
